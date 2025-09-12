@@ -1,0 +1,2768 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="606 Premium Game Zone - лучший игровой клуб с VIP зонами, PlayStation и отличным обслуживанием">
+  <title>606 Premium Game Zone - Игровой клуб премиум класса</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="//www.google.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+    onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </noscript>
+  <style>
+    :root {
+      --dark-space: #0A0E23;
+      --neon-blue: #00F0FF;
+      --neon-purple: #C724F1;
+      --neon-pink: #FF2D75;
+      --cyber-yellow: #FFEE00;
+      --cyber-green: #39FF14;
+      --white: #FFFFFF;
+      --dark-blue: #0A1A3A;
+      --gray: #A0A0A0;
+      --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --glow-transition: all 0.6s ease-in-out;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    body.is-loading {
+      overflow: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--dark-space);
+      color: var(--white);
+      font-family: 'Rajdhani', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+      background-image:
+        radial-gradient(circle at 25% 25%, rgba(0, 240, 255, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 75% 75%, rgba(199, 36, 241, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 50% 50%, rgba(57, 255, 20, 0.03) 0%, transparent 70%);
+      background-attachment: fixed;
+      position: relative;
+      will-change: background-position;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+        background-position: center top;
+      }
+    }
+
+
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--neon-blue) rgba(255, 255, 255, 0.06);
+    }
+
+    ::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: linear-gradient(180deg, rgba(0, 240, 255, 0.06), rgba(199, 36, 241, 0.06));
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--neon-blue), var(--neon-purple));
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.6), inset 0 0 10px rgba(199, 36, 241, 0.4);
+      border: 2px solid rgba(10, 14, 35, 0.9);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, var(--neon-pink), var(--neon-purple));
+      box-shadow: 0 0 12px rgba(255, 45, 117, 0.7), inset 0 0 10px rgba(199, 36, 241, 0.5);
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+
+
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0;
+      z-index: 120;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--cyber-yellow));
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+      transition: width 0.1s linear;
+    }
+
+
+    .tab-btn:focus-visible,
+    .phone-link:focus-visible,
+    .social-link:focus-visible,
+    .back-to-top:focus-visible {
+      outline: 2px solid var(--neon-blue);
+      outline-offset: 3px;
+      box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.25);
+    }
+
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      25% {
+        transform: translateY(-8px) rotate(1deg);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(0deg);
+      }
+
+      75% {
+        transform: translateY(-8px) rotate(-1deg);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes textGlow {
+
+      0%,
+      100% {
+        text-shadow:
+          0 0 10px var(--neon-blue),
+          0 0 20px rgba(0, 240, 255, 0.5),
+          0 0 30px rgba(0, 240, 255, 0.3),
+          0 0 40px rgba(0, 240, 255, 0.1);
+      }
+
+      25% {
+        text-shadow:
+          0 0 15px var(--neon-pink),
+          0 0 25px rgba(255, 45, 117, 0.7),
+          0 0 35px rgba(255, 45, 117, 0.5),
+          0 0 45px rgba(255, 45, 117, 0.2);
+      }
+
+      50% {
+        text-shadow:
+          0 0 12px var(--cyber-green),
+          0 0 22px rgba(57, 255, 20, 0.6),
+          0 0 32px rgba(57, 255, 20, 0.4),
+          0 0 42px rgba(57, 255, 20, 0.1);
+      }
+
+      75% {
+        text-shadow:
+          0 0 18px var(--neon-purple),
+          0 0 28px rgba(199, 36, 241, 0.8),
+          0 0 38px rgba(199, 36, 241, 0.6),
+          0 0 48px rgba(199, 36, 241, 0.2);
+      }
+    }
+
+    @keyframes matrixRain {
+      0% {
+        transform: translateY(-100vh) translateX(0);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(100vh) translateX(10px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes hologramFlicker {
+
+      0%,
+      100% {
+        opacity: 1;
+        filter: hue-rotate(0deg);
+      }
+
+      25% {
+        opacity: 0.8;
+        filter: hue-rotate(90deg);
+      }
+
+      50% {
+        opacity: 0.9;
+        filter: hue-rotate(180deg);
+      }
+
+      75% {
+        opacity: 0.7;
+        filter: hue-rotate(270deg);
+      }
+    }
+
+    .loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--dark-space), #1a1a3a, var(--dark-space));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.8s, visibility 0.8s;
+    }
+
+    .loader-wrapper.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .loader::before,
+    .loader::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      animation: spin 2s linear infinite;
+    }
+
+    .loader::before {
+      width: 80px;
+      height: 80px;
+      border: 4px solid transparent;
+      border-top: 4px solid var(--neon-blue);
+      border-right: 4px solid var(--neon-purple);
+      border-bottom: 4px solid var(--neon-pink);
+      border-left: 4px solid var(--cyber-yellow);
+    }
+
+    .loader::after {
+      width: 60px;
+      height: 60px;
+      top: 10px;
+      left: 10px;
+      border: 3px solid transparent;
+      border-top: 3px solid var(--cyber-green);
+      border-right: 3px solid var(--neon-pink);
+      border-bottom: 3px solid var(--neon-blue);
+      border-left: 3px solid var(--neon-purple);
+      animation: spin 1.5s linear infinite reverse;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading-text {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--neon-blue);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 1.2rem;
+      animation: textGlow 2s infinite, pulse 1.5s infinite;
+    }
+
+    .loading-progress {
+      width: 300px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      margin-top: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .loading-progress::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--cyber-yellow));
+      animation: loadProgress 3s ease-in-out infinite;
+    }
+
+    @keyframes loadProgress {
+      0% {
+        left: -100%;
+      }
+
+      100% {
+        left: 100%;
+      }
+    }
+
+
+    .cyber-glitch {
+      position: relative;
+      display: inline-block;
+    }
+
+    .cyber-glitch::before,
+    .cyber-glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--dark-space);
+      overflow: hidden;
+    }
+
+    .cyber-glitch::before {
+      left: 2px;
+      text-shadow: -2px 0 var(--neon-pink);
+      clip: rect(44px, 450px, 56px, 0);
+      animation: glitch-anim-1 3s infinite linear alternate-reverse;
+    }
+
+    .cyber-glitch::after {
+      left: -2px;
+      text-shadow: -2px 0 var(--neon-blue), 2px 0 var(--cyber-green);
+      clip: rect(44px, 450px, 56px, 0);
+      animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitch-anim-1 {
+      0% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      5% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      10% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      15% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      20% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      25% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      30% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      35% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      40% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      45% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      50% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      55% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      60% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      65% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      70% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      75% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      80% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      85% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      90% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      95% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      100% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+    }
+
+    @keyframes glitch-anim-2 {
+      0% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      5% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      10% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      15% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      20% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      25% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      30% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      35% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      40% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      45% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      50% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      55% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      60% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      65% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      70% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      75% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      80% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      85% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      90% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      95% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+
+      100% {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+      }
+    }
+
+    .matrix-rain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .matrix-char {
+      position: absolute;
+      color: var(--cyber-green);
+      font-family: 'Orbitron', monospace;
+      font-size: 14px;
+      animation: matrixRain 8s linear infinite;
+      opacity: 0.7;
+      text-shadow: 0 0 5px var(--cyber-green);
+    }
+
+
+    header {
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, var(--dark-blue) 0%, #1A1A3A 50%, var(--dark-space) 100%),
+        radial-gradient(circle at center, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--cyber-yellow)) 1;
+      box-shadow:
+        0 0 50px rgba(0, 240, 255, 0.2),
+        inset 0 0 50px rgba(199, 36, 241, 0.1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 900;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--white);
+      text-shadow:
+        0 0 10px var(--neon-blue),
+        0 0 20px rgba(0, 240, 255, 0.8),
+        0 0 30px rgba(0, 240, 255, 0.6),
+        0 0 40px rgba(0, 240, 255, 0.4),
+        0 0 50px rgba(0, 240, 255, 0.2);
+      position: relative;
+      z-index: 2;
+      letter-spacing: 4px;
+      margin-bottom: 1.5rem;
+      animation: textGlow 4s infinite, float 6s ease-in-out infinite;
+      transition: var(--glow-transition);
+      cursor: pointer;
+    }
+
+    .logo:hover {
+      transform: scale(1.05) rotateX(5deg);
+      text-shadow:
+        0 0 15px var(--neon-pink),
+        0 0 25px rgba(255, 45, 117, 0.9),
+        0 0 35px rgba(255, 45, 117, 0.7),
+        0 0 45px rgba(255, 45, 117, 0.5),
+        0 0 55px rgba(255, 45, 117, 0.3);
+    }
+
+    .tagline {
+      font-size: 1.4rem;
+      color: var(--neon-blue);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+      animation: pulse 3s infinite;
+      position: relative;
+    }
+
+    .tagline::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -10px;
+      right: -10px;
+      bottom: -5px;
+      background: linear-gradient(45deg, transparent, rgba(0, 240, 255, 0.1), transparent);
+      border-radius: 10px;
+      z-index: -1;
+      animation: hologramFlicker 4s infinite;
+    }
+
+
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* Language switcher */
+    .lang-switch {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      display: flex;
+      gap: 8px;
+      z-index: 130;
+      padding: 4px;
+      border-radius: 10px;
+      background: rgba(10, 14, 35, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      opacity: 0.85;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .lang-switch:hover {
+      opacity: 1;
+    }
+
+    .lang-btn {
+      padding: 6px 10px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      background: rgba(0, 0, 0, 0.3);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .lang-btn.active {
+      color: var(--cyber-yellow);
+      border-color: var(--neon-blue);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      .lang-switch {
+        top: 10px;
+        right: 10px;
+        gap: 6px;
+        padding: 3px;
+      }
+
+      .lang-btn {
+        font-size: 0.85rem;
+        padding: 5px 8px;
+      }
+    }
+
+
+    .container {
+      padding: 2rem 1rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Defer rendering of big grids */
+    .pricing-grid,
+    .menu-grid,
+    .promo-grid,
+    .contact-grid,
+    .gallery-grid {
+      content-visibility: auto;
+      contain-intrinsic-size: 1000px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+      position: relative;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .tab-btn {
+      padding: 1rem 2rem;
+      background: transparent;
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+      position: relative;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, transparent, var(--neon-blue), transparent) 1;
+      clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+      min-width: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      text-transform: uppercase;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
+
+    .tab-btn::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--cyber-yellow));
+      z-index: -1;
+      clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+      opacity: 0;
+      transition: var(--transition);
+      filter: blur(1px);
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: radial-gradient(circle, var(--neon-blue), transparent);
+      transform: translate(-50%, -50%);
+      transition: var(--transition);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .tab-btn:hover {
+      color: var(--cyber-yellow);
+      transform: translateY(-3px) scale(1.05);
+      text-shadow: 0 0 10px var(--cyber-yellow);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3);
+    }
+
+    .tab-btn {
+      will-change: transform, box-shadow;
+    }
+
+    .tab-btn:hover::before {
+      opacity: 0.6;
+      filter: blur(0px);
+    }
+
+    .tab-btn:hover::after {
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+    }
+
+    .tab-btn.active {
+      color: var(--cyber-yellow);
+      border-image: linear-gradient(45deg, var(--neon-purple), var(--neon-pink), var(--neon-purple)) 1;
+      background: rgba(0, 240, 255, 0.1);
+      text-shadow: 0 0 15px var(--cyber-yellow);
+      transform: scale(1.1);
+      box-shadow:
+        0 0 30px rgba(255, 238, 0, 0.4),
+        inset 0 0 20px rgba(0, 240, 255, 0.2);
+    }
+
+    .tab-btn.active::before {
+      opacity: 0.8;
+    }
+
+    .tab-btn i {
+      font-size: 1.3rem;
+      transition: var(--transition);
+    }
+
+    .tab-btn:hover i {
+      transform: rotate(360deg) scale(1.2);
+    }
+
+
+    .tab-content {
+      display: none;
+      opacity: 0;
+      transform: translateY(30px) rotateX(10deg);
+      transition: var(--transition);
+    }
+
+    .tab-content.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0) rotateX(0deg);
+      animation: tabSlideIn 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    @keyframes tabSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px) rotateX(15deg) scale(0.95);
+      }
+
+      50% {
+        opacity: 0.7;
+        transform: translateY(-10px) rotateX(-2deg) scale(1.02);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg) scale(1);
+      }
+    }
+
+    section {
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Orbitron', sans-serif;
+      margin: 2rem 0;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--neon-blue);
+      text-shadow:
+        0 0 10px rgba(0, 240, 255, 0.8),
+        0 0 20px rgba(0, 240, 255, 0.6),
+        0 0 30px rgba(0, 240, 255, 0.4);
+      padding-bottom: 1rem;
+      border-bottom: 3px solid transparent;
+      border-image: linear-gradient(90deg, var(--neon-purple), var(--neon-pink), var(--neon-purple)) 1;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      animation: float 4s ease-in-out infinite;
+      position: relative;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -20px;
+      right: -20px;
+      bottom: -10px;
+      background: linear-gradient(45deg, transparent, rgba(0, 240, 255, 0.05), transparent);
+      border-radius: 15px;
+      z-index: -1;
+      animation: hologramFlicker 5s infinite;
+    }
+
+    h2 i {
+      font-size: 2rem;
+      color: var(--cyber-yellow);
+      animation: pulse 2s infinite;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      color: var(--neon-pink);
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-shadow: 0 0 15px rgba(255, 45, 117, 0.6);
+    }
+
+    h3 i {
+      color: var(--cyber-green);
+      animation: float 3s ease-in-out infinite;
+    }
+
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+      perspective: 1000px;
+    }
+
+    .pricing-card {
+      background:
+        linear-gradient(135deg, rgba(10, 14, 35, 0.9) 0%, rgba(26, 26, 58, 0.8) 100%),
+        radial-gradient(circle at top right, rgba(0, 240, 255, 0.1) 0%, transparent 50%);
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, rgba(0, 240, 255, 0.3), rgba(199, 36, 241, 0.3), rgba(255, 45, 117, 0.3)) 1;
+      border-radius: 15px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow:
+        0 10px 30px rgba(0, 240, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      transform-style: preserve-3d;
+      will-change: transform, box-shadow;
+    }
+
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background:
+        linear-gradient(45deg, transparent 30%, rgba(0, 240, 255, 0.1) 50%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(199, 36, 241, 0.1) 50%, transparent 70%);
+      transform: rotate(0deg);
+      animation: shine 4s infinite;
+      z-index: 1;
+    }
+
+    .pricing-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--cyber-yellow));
+      opacity: 0;
+      transition: var(--transition);
+      border-radius: 15px;
+      z-index: -1;
+      filter: blur(20px);
+    }
+
+    @keyframes shine {
+      0% {
+        transform: rotate(0deg) translate(-30%, -30%);
+      }
+
+      25% {
+        transform: rotate(90deg) translate(-30%, -30%);
+      }
+
+      50% {
+        transform: rotate(180deg) translate(-30%, -30%);
+      }
+
+      75% {
+        transform: rotate(270deg) translate(-30%, -30%);
+      }
+
+      100% {
+        transform: rotate(360deg) translate(-30%, -30%);
+      }
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-15px) rotateX(5deg) rotateY(5deg) scale(1.05);
+      box-shadow:
+        0 20px 50px rgba(0, 240, 255, 0.4),
+        0 0 60px rgba(199, 36, 241, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      border-image: linear-gradient(45deg, rgba(0, 240, 255, 0.8), rgba(199, 36, 241, 0.8), rgba(255, 45, 117, 0.8)) 1;
+    }
+
+    .pricing-card:hover::after {
+      opacity: 0.1;
+    }
+
+    .zone-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--neon-blue);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 2;
+    }
+
+    .zone-name i {
+      font-size: 1.5rem;
+      color: var(--cyber-yellow);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .vip .zone-name {
+      color: var(--neon-pink);
+      text-shadow: 0 0 15px rgba(255, 45, 117, 0.5);
+    }
+
+    .vip .zone-name i {
+      color: var(--cyber-green);
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+      transition: var(--transition);
+      border-radius: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .price-item:hover {
+      background: rgba(0, 240, 255, 0.05);
+      border-bottom-color: rgba(0, 240, 255, 0.6);
+      transform: translateX(10px);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+    }
+
+    .price-label {
+      color: var(--gray);
+      position: relative;
+      padding-left: 1.5rem;
+      font-weight: 600;
+    }
+
+    .price-label::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--neon-blue);
+      animation: pulse 2s infinite;
+    }
+
+    .price-value {
+      font-weight: bold;
+      color: var(--cyber-yellow);
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-shadow: 0 0 10px rgba(255, 238, 0, 0.5);
+    }
+
+    .price-value i {
+      font-size: 1rem;
+      opacity: 0.8;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .price-value span {
+      font-size: 1.4rem;
+      color: var(--neon-purple);
+      text-shadow: 0 0 10px rgba(199, 36, 241, 0.5);
+    }
+
+    .promo-section {
+      background:
+        linear-gradient(135deg, rgba(10, 14, 35, 0.9) 0%, rgba(26, 26, 58, 0.9) 100%),
+        radial-gradient(circle at center, rgba(57, 255, 20, 0.1) 0%, transparent 70%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin: 3rem 0;
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, var(--cyber-green), var(--neon-blue), var(--neon-purple)) 1;
+      position: relative;
+      overflow: hidden;
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+      text-align: center;
+    }
+
+
+    .promo-section h3 {
+      justify-content: center;
+    }
+
+    .promo-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(45deg, transparent 45%, rgba(57, 255, 20, 0.1) 50%, transparent 55%),
+        linear-gradient(-45deg, transparent 45%, rgba(0, 240, 255, 0.1) 50%, transparent 55%);
+      background-size: 10px 10px;
+      opacity: 0.5;
+      animation: matrixMove 10s linear infinite;
+    }
+
+    @keyframes matrixMove {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(10px, 10px);
+      }
+    }
+
+    .bonus-badge {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink), var(--cyber-yellow));
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow:
+        0 8px 25px rgba(199, 36, 241, 0.5),
+        0 0 40px rgba(255, 45, 117, 0.3);
+      transition: var(--transition);
+      animation: float 4s ease-in-out infinite;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bonus-badge::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transform: rotate(45deg);
+      animation: shine 3s infinite;
+    }
+
+    .bonus-badge:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow:
+        0 12px 35px rgba(255, 45, 117, 0.7),
+        0 0 60px rgba(199, 36, 241, 0.5);
+    }
+
+    .bonus-badge i {
+      margin-right: 0.8rem;
+      font-size: 1.4rem;
+      animation: pulse 2s infinite;
+    }
+
+    .promo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 420px));
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .promo-item {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 15px;
+      padding: 1.5rem;
+      border-left: 4px solid var(--neon-blue);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      max-width: 420px;
+      margin: 0 auto;
+      text-align: left;
+      will-change: transform, box-shadow;
+    }
+
+    .promo-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.2), transparent);
+      transition: var(--transition);
+    }
+
+    .promo-item:hover {
+      background: rgba(0, 0, 0, 0.6);
+      transform: translateY(-8px) scale(1.02);
+      border-left-color: var(--neon-pink);
+      box-shadow: 0 15px 35px rgba(0, 240, 255, 0.3);
+    }
+
+    .promo-item:hover::before {
+      left: 100%;
+    }
+
+    .promo-item h4 {
+      color: var(--neon-blue);
+      margin-bottom: 0.8rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .promo-item h4 i {
+      color: var(--cyber-yellow);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .promo-item p {
+      font-size: 1rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .menu-item {
+      background:
+        linear-gradient(135deg, rgba(10, 14, 35, 0.8) 0%, rgba(26, 26, 58, 0.7) 100%),
+        radial-gradient(circle at bottom left, rgba(199, 36, 241, 0.1) 0%, transparent 50%);
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, rgba(199, 36, 241, 0.3), rgba(255, 45, 117, 0.3), rgba(199, 36, 241, 0.3)) 1;
+      border-radius: 15px;
+      padding: 2rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      will-change: transform, box-shadow;
+    }
+
+    .menu-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink), var(--cyber-yellow));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .menu-item:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow:
+        0 15px 40px rgba(199, 36, 241, 0.4),
+        0 0 50px rgba(255, 45, 117, 0.2);
+      border-image: linear-gradient(45deg, rgba(199, 36, 241, 0.8), rgba(255, 45, 117, 0.8), rgba(199, 36, 241, 0.8)) 1;
+    }
+
+    .menu-item:hover::after {
+      transform: scaleX(1);
+    }
+
+    .menu-item h4 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--neon-blue);
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    }
+
+    .menu-price {
+      color: var(--cyber-yellow);
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-shadow: 0 0 10px rgba(255, 238, 0, 0.5);
+    }
+
+    .menu-description {
+      color: var(--gray);
+      font-size: 1rem;
+      margin-top: 0.8rem;
+      line-height: 1.5;
+    }
+
+
+    .menu-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .menu-item:hover .menu-img {
+      transform: scale(1.03);
+    }
+
+
+    .map-container {
+      height: 450px;
+      margin: 3rem 0;
+      background: rgba(10, 14, 35, 0.8);
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink)) 1;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow:
+        0 0 50px rgba(0, 240, 255, 0.2),
+        inset 0 0 50px rgba(199, 36, 241, 0.1);
+    }
+
+    .map-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(135deg, rgba(0, 240, 255, 0.15) 0%, transparent 50%),
+        linear-gradient(-135deg, rgba(199, 36, 241, 0.15) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .map-lazy {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10, 14, 35, 0.9), rgba(26, 26, 58, 0.9));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--neon-blue);
+      cursor: pointer;
+      z-index: 3;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .map-lazy-text {
+      font-family: 'Orbitron', sans-serif;
+      padding: 0.8rem 1.4rem;
+      border: 2px solid var(--neon-blue);
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      transition: transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    }
+
+    .map-lazy:hover .map-lazy-text {
+      transform: scale(1.05);
+    }
+
+    .contact-info {
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .working-hours {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      color: var(--neon-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+      animation: pulse 3s infinite;
+    }
+
+    .working-hours i {
+      font-size: 1.6rem;
+      color: var(--cyber-green);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .contact-card {
+      background:
+        linear-gradient(135deg, rgba(10, 14, 35, 0.8) 0%, rgba(26, 26, 58, 0.7) 100%),
+        radial-gradient(circle at center, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 2px solid transparent;
+      border-image: linear-gradient(45deg, rgba(0, 240, 255, 0.3), rgba(199, 36, 241, 0.3), rgba(0, 240, 255, 0.3)) 1;
+      transition: var(--transition);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      will-change: transform, box-shadow;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(0, 240, 255, 0.1), transparent);
+      transform: rotate(0deg);
+      animation: none;
+    }
+
+    .contact-card:hover {
+      border-image: linear-gradient(45deg, rgba(0, 240, 255, 0.8), rgba(199, 36, 241, 0.8), rgba(0, 240, 255, 0.8)) 1;
+      transform: translateY(-10px) scale(1.02);
+      box-shadow:
+        0 20px 40px rgba(0, 240, 255, 0.3),
+        0 0 60px rgba(199, 36, 241, 0.2);
+    }
+
+    .contact-card h4 {
+      color: var(--neon-blue);
+      margin-bottom: 1.5rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      text-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    }
+
+    .contact-card h4 i {
+      font-size: 1.6rem;
+      color: var(--cyber-yellow);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .contact-card p {
+      color: var(--gray);
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .phone-link {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink), var(--cyber-yellow));
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.4rem;
+      transition: var(--transition);
+      box-shadow:
+        0 0 30px rgba(199, 36, 241, 0.4),
+        0 8px 25px rgba(255, 45, 117, 0.3);
+      position: relative;
+      overflow: hidden;
+      margin: 2rem 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .phone-link::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transform: rotate(45deg);
+      animation: shine 4s infinite;
+    }
+
+    .phone-link:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow:
+        0 0 50px rgba(255, 45, 117, 0.6),
+        0 12px 35px rgba(199, 36, 241, 0.5);
+    }
+
+    .phone-icon {
+      margin-right: 1rem;
+      font-size: 1.6rem;
+      animation: pulse 2s infinite;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.8rem;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
+
+    .social-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+      opacity: 0;
+      transition: var(--transition);
+      border-radius: 50%;
+    }
+
+    .social-link:hover {
+      color: var(--white);
+      transform: translateY(-5px) scale(1.15);
+      border: 2px solid var(--neon-blue);
+      box-shadow:
+        0 0 25px rgba(0, 240, 255, 0.6),
+        0 8px 20px rgba(0, 240, 255, 0.3);
+    }
+
+    .social-link:hover::before {
+      opacity: 0.2;
+    }
+
+
+    .cyber-scanner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--neon-blue), var(--neon-purple), var(--neon-pink), transparent);
+      z-index: 100;
+      animation: scan 4s linear infinite;
+      opacity: 0.8;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+    }
+
+    @keyframes scan {
+      0% {
+        transform: translateY(0) scaleX(0.5);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-100vh) scaleX(1.5);
+        opacity: 0;
+      }
+    }
+
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink), var(--cyber-yellow));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 99;
+      box-shadow:
+        0 0 25px rgba(199, 36, 241, 0.5),
+        0 8px 20px rgba(255, 45, 117, 0.3);
+      border: 2px solid transparent;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-8px) scale(1.2);
+      box-shadow:
+        0 0 40px rgba(255, 45, 117, 0.8),
+        0 12px 30px rgba(199, 36, 241, 0.5);
+      border: 2px solid var(--neon-blue);
+    }
+
+    footer {
+      background:
+        linear-gradient(135deg, var(--dark-blue) 0%, #1A1A3A 50%, var(--dark-space) 100%),
+        radial-gradient(circle at center, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+      padding: 3rem 1rem;
+      text-align: center;
+      border-top: 2px solid transparent;
+      border-image: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink)) 1;
+      margin-top: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      text-shadow:
+        0 0 15px rgba(0, 240, 255, 0.5),
+        0 0 25px rgba(0, 240, 255, 0.3);
+      animation: textGlow 5s infinite;
+    }
+
+    .copyright {
+      color: var(--gray);
+      font-size: 1rem;
+      margin-top: 2rem;
+      opacity: 0.8;
+    }
+
+
+
+    .gallery-section {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .gallery-title {
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--neon-blue);
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: var(--transition);
+      height: 350px;
+      border: 2px solid var(--neon-blue);
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+      will-change: transform, box-shadow;
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(10, 14, 35, 0.9), transparent);
+      padding: 1.5rem;
+      transform: translateY(100%);
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 240, 255, 0.3);
+      border-color: var(--neon-pink);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item-title {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--neon-blue);
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .gallery-item-desc {
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        height: 300px;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+      .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .tab-btn {
+        width: 100%;
+        max-width: 350px;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .pricing-grid,
+      .menu-grid,
+      .promo-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .map-container {
+        height: 350px;
+      }
+
+      .pricing-card,
+      .menu-item,
+      .promo-item,
+      .contact-card,
+      .social-link {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+      }
+
+      .phone-link {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+      }
+
+      .back-to-top {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 2rem;
+        letter-spacing: 2px;
+      }
+
+      .tagline {
+        font-size: 1.1rem;
+      }
+
+      .container {
+        padding: 1.5rem 0.8rem;
+      }
+
+      .pricing-card,
+      .menu-item,
+      .contact-card {
+        padding: 1.5rem;
+      }
+
+      .modal-content {
+        padding: 2rem;
+        margin: 1rem;
+      }
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .matrix-char {
+        animation: none !important;
+      }
+
+      .logo {
+        animation: none !important;
+      }
+
+      .tagline {
+        animation: none !important;
+      }
+
+      .back-to-top.visible {
+        animation: none !important;
+      }
+    }
+
+    /* Performance lite mode: disable heavy animations/effects regardless of OS setting */
+    .perf-lite * {
+      animation: none !important;
+    }
+
+    .perf-lite body {
+      background-attachment: scroll;
+      will-change: auto;
+    }
+
+    .perf-lite .matrix-rain,
+    .perf-lite .cyber-scanner {
+      display: none !important;
+    }
+
+    .perf-lite .pricing-card,
+    .perf-lite .menu-item,
+    .perf-lite .promo-item,
+    .perf-lite .contact-card,
+    .perf-lite .social-link {
+      -webkit-backdrop-filter: none !important;
+      backdrop-filter: none !important;
+    }
+
+    .perf-lite .pricing-card::before,
+    .perf-lite .bonus-badge::before,
+    .perf-lite .phone-link::before {
+      animation: none !important;
+    }
+
+    /* Light reveal animation used across sections */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .45s ease, transform .45s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <script>
+    // Enable lightweight performance mode to reduce jank on low-end devices
+    window.PERF_LITE = true;
+    document.documentElement.classList.add('perf-lite');
+
+    // i18n dictionaries
+    window.I18N = {
+      ru: {
+        tagline: 'Лучший игровой опыт в Ургенче',
+        'nav.zones': 'Игровые зоны',
+        'nav.menu': 'Меню',
+        'nav.gallery': 'Галерея',
+        'nav.contacts': 'Контакты',
+        'sections.zones.h2': 'Наши игровые зоны',
+        'zones.desc': 'Выберите подходящую зону для идеального игрового опыта. Все зоны оборудованы мощными ПК и комфортными креслами.',
+        'price.before18': 'До 18:00 (1 час)',
+        'price.after18': 'После 18:00 (1 час)',
+        'price.night': 'Ночной (22:00-08:00)',
+        'promo.badge': 'АКЦИИ И БОНУСЫ',
+        'promo.title': 'Специальные предложения',
+        'promo.desc': 'Зарегистрируйте аккаунт в клубе и получите мгновенную скидку 20% на услуги.',
+        'promo.item1.title': 'Скидка 20% за регистрацию',
+        'promo.item1.desc': 'Создайте аккаунт 606 Premium Game Zone — получите 20% скидку на услуги при первом визите.',
+        'loader.loading': 'Загрузка...',
+        'footer.desc': 'Лучший игровой клуб в Ургенче с VIP зонами и PlayStation 5',
+        'footer.copyright': 'Все права защищены.',
+        'sections.menu.h2': 'Наше меню',
+        'menu.desc': 'Вкусные блюда и Мохито, чтобы подкрепиться во время игры',
+        'menu.mojito.h3': 'Мохито',
+        'menu.mojito.strawberry': 'Клубничный',
+        'menu.mojito.classic': 'Классический',
+        'menu.mojito.ocean': 'Океан',
+        'menu.mojito.raspberry': 'Малиновый',
+        'menu.mojito.tarragon': 'Тархун',
+        'menu.mojito.carafe': 'Графин (1L)',
+        'menu.hotdogs.h3': 'Хот-доги',
+        'menu.hotdogs.two': 'Хот-дог (2 сосиски)',
+        'menu.hotdogs.three': 'Хот-дог (3 сосиски)',
+        'menu.hotdogs.turkish': 'Хот-дог Турецкий',
+        'menu.burgers.h3': 'Чизбургеры',
+        'menu.burgers.one': 'Чизбургер (1 котлетка)',
+        'menu.burgers.two': 'Чизбургер (2 котлетки)',
+        'menu.tea.h3': 'Чай',
+        'menu.tea.cup': 'Чай (Бардак)',
+        'gallery.title': 'Галерея клуба',
+        'gallery.item1.desc': 'Наш игровой клуб с современным дизайном и лучшим оборудованием в городе',
+        'gallery.item2.desc': 'Яркая неоновая вывеска, которую видно издалека',
+        'gallery.item3.desc': 'Современная стойка администратора с подсветкой',
+        'gallery.item4.desc': 'Комфортные места с мощными игровыми ПК',
+        'gallery.item5.desc': 'Премиум зона с PlayStation 5 и креслами премиум-класса',
+        'gallery.item6.desc': 'Киберспортивная зона для турниров',
+        'contacts.h2': 'Как нас найти',
+        'contacts.showMap': 'Показать карту',
+        'contacts.hours': 'Режим работы: 08:00 - 00:00 (без выходных)',
+        'contacts.address.title': 'Адрес',
+        'contacts.address.l1': 'обл. Хорезм, г. Ургенч',
+        'contacts.address.l2': 'ул. Абулгази Бахадирхан',
+        'contacts.socials.title': 'Соцсети'
+      },
+      uz: {
+        tagline: 'Urganchda eng yaxshi o‘yin tajribasi',
+        'nav.zones': 'O‘yin zonalari',
+        'nav.menu': 'Menyu',
+        'nav.gallery': 'Galereya',
+        'nav.contacts': 'Kontaktlar',
+        'sections.zones.h2': 'Bizning o‘yin zonalarimiz',
+        'zones.desc': 'Mukammal o‘yin tajribasi uchun mos zonani tanlang. Barcha zonalar kuchli PK va qulay kreslolar bilan jihozlangan.',
+        'price.before18': '18:00 gacha (1 soat)',
+        'price.after18': '18:00 dan keyin (1 soat)',
+        'price.night': 'Tungi (22:00-08:00)',
+        'promo.badge': 'AKSIYALAR VA BONUSLAR',
+        'promo.title': 'Maxsus takliflar',
+        'promo.desc': 'Kлубda akkaunt yarating va xizmatlarga darhol 20% chegirma oling.',
+        'promo.item1.title': 'Ro‘yxatdan o‘tish uchun 20% chegirma',
+        'promo.item1.desc': '606 Premium Game Zone akkaunti yarating — birinchi tashrifda 20% chegirma oling.',
+        'loader.loading': 'Yuklanmoqda...',
+        'footer.desc': 'Urganchdagi eng yaxshi o‘yin klubi: VIP zonalar va PlayStation 5',
+        'footer.copyright': 'Barcha huquqlar himoyalangan.',
+        'sections.menu.h2': 'Bizning menyu',
+        'menu.desc': 'Mazali taomlar va Mohito — o‘yin paytida quvvat oling',
+        'menu.mojito.h3': 'Mohito',
+        'menu.mojito.strawberry': 'Qulupnay',
+        'menu.mojito.classic': 'Klassik',
+        'menu.mojito.ocean': 'Okean',
+        'menu.mojito.raspberry': 'Malina',
+        'menu.mojito.tarragon': 'Tarxun',
+        'menu.mojito.carafe': 'Grafin (1L)',
+        'menu.hotdogs.h3': 'Hot-doglar',
+        'menu.hotdogs.two': 'Hot-dog (2 sosiskali)',
+        'menu.hotdogs.three': 'Hot-dog (3 sosiskali)',
+        'menu.hotdogs.turkish': 'Turkcha hot-dog',
+        'menu.burgers.h3': 'Chizburgerlar',
+        'menu.burgers.one': 'Chizburger (1 kotletali)',
+        'menu.burgers.two': 'Chizburger (2 kotletali)',
+        'menu.tea.h3': 'Choy',
+        'menu.tea.cup': 'Choy (Bardak)',
+        'gallery.title': 'Klub galereyasi',
+        'gallery.item1.desc': 'Bizning klub: zamonaviy dizayn va shahardagi eng yaxshi jihozlar',
+        'gallery.item2.desc': 'Yorqin neon yozuv — uzoqdan ko‘rinadi',
+        'gallery.item3.desc': 'Yorug‘lik bilan bezatilgan administrator stoykasi',
+        'gallery.item4.desc': 'Kuchli o‘yin kompyuterlari bilan qulay joylar',
+        'gallery.item5.desc': 'PlayStation 5 va qulay kresloli premium zona',
+        'gallery.item6.desc': 'Turnirlar uchun kiber-sport zonasi',
+        'contacts.h2': 'Qanday topish mumkin',
+        'contacts.showMap': 'Xaritani ko‘rsatish',
+        'contacts.hours': 'Ish vaqti: 08:00 - 00:00 (damsiz)',
+        'contacts.address.title': 'Manzil',
+        'contacts.address.l1': 'Xorazm vil., Urganch sh.',
+        'contacts.address.l2': 'Abulg‘ozi Bahodirxon ko‘chasi',
+        'contacts.socials.title': 'Ijtimoiy tarmoqlar'
+      }
+    };
+
+    function applyLanguage(lang) {
+      const dict = window.I18N[lang] || window.I18N.ru;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+      document.documentElement.setAttribute('lang', lang === 'uz' ? 'uz' : 'ru');
+    }
+
+    function setupI18n() {
+      const saved = localStorage.getItem('lang');
+      const defaultLang = saved === 'uz' || saved === 'ru' ? saved : 'ru';
+      applyLanguage(defaultLang);
+      document.addEventListener('click', (e) => {
+        const target = e.target.closest('.lang-btn');
+        if (target) {
+          const lang = target.getAttribute('data-lang');
+          localStorage.setItem('lang', lang);
+          applyLanguage(lang);
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', setupI18n);
+  </script>
+</head>
+
+<body class="is-loading">
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+    <div class="loading-text" data-i18n="loader.loading">Загрузка...</div>
+    <div class="loading-progress"></div>
+  </div>
+
+  <div class="matrix-rain" id="matrix-rain"></div>
+
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="cyber-scanner"></div>
+
+  <header>
+    <div class="particles" id="particles-js"></div>
+    <h1 class="logo cyber-glitch" data-text="606 PREMIUM GAME ZONE">606 PREMIUM GAME ZONE</h1>
+    <p class="tagline" data-i18n="tagline">Лучший игровой опыт в Ургенче</p>
+  </header>
+
+
+  <div class="lang-switch" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="uz">UZ</button>
+  </div>
+
+  <div class="container">
+    <div class="tab-buttons" role="tablist" aria-label="Разделы сайта">
+      <button id="tab-zones" class="tab-btn active" role="tab" aria-controls="zones" aria-selected="true" tabindex="0"
+        onclick="openTab('zones', this)"><i class="fas fa-gamepad"></i> <span data-i18n="nav.zones">Игровые
+          зоны</span></button>
+      <button id="tab-menu" class="tab-btn" role="tab" aria-controls="menu" aria-selected="false" tabindex="-1"
+        onclick="openTab('menu', this)"><i class="fas fa-utensils"></i> <span data-i18n="nav.menu">Меню</span></button>
+      <button id="tab-gallery" class="tab-btn" role="tab" aria-controls="gallery" aria-selected="false" tabindex="-1"
+        onclick="openTab('gallery', this)"><i class="fas fa-camera"></i> <span
+          data-i18n="nav.gallery">Галерея</span></button>
+      <button id="tab-contacts" class="tab-btn" role="tab" aria-controls="contacts" aria-selected="false" tabindex="-1"
+        onclick="openTab('contacts', this)"><i class="fas fa-map-marker-alt"></i> <span
+          data-i18n="nav.contacts">Контакты</span></button>
+    </div>
+
+
+    <div id="zones" class="tab-content active" role="tabpanel" aria-labelledby="tab-zones">
+      <section>
+        <h2><i class="fas fa-joystick"></i> <span data-i18n="sections.zones.h2">Наши игровые зоны</span></h2>
+        <p data-i18n="zones.desc">Выберите подходящую зону для идеального игрового опыта. Все зоны оборудованы мощными
+          ПК и комфортными креслами.</p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="zone-name">STANDART <i class="fas fa-desktop"></i></div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.before18">До 18:00 (1 час)</span>
+              <span class="price-value">7,000 <i class="fas fa-coins"></i></span>
+            </div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.after18">После 18:00 (1 час)</span>
+              <span class="price-value">60,000 <i class="fas fa-coins"></i></span>
+            </div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.night">Ночной (22:00-08:00)</span>
+              <span class="price-value">40,000 <i class="fas fa-coins"></i></span>
+            </div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="zone-name">WARZONE <i class="fas fa-headset"></i></div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.before18">До 18:00 (1 час)</span>
+              <span class="price-value">10,000 <i class="fas fa-coins"></i></span>
+            </div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.after18">После 18:00 (1 час)</span>
+              <span class="price-value">15,000 <i class="fas fa-coins"></i></span>
+            </div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.night">Ночной (22:00-08:00)</span>
+              <span class="price-value">35,000 <i class="fas fa-coins"></i></span>
+            </div>
+          </div>
+
+          <div class="pricing-card">
+            <div class="zone-name">SPECIAL <i class="fas fa-star"></i></div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.before18">До 18:00 (1 час)</span>
+              <span class="price-value">16,000 <i class="fas fa-coins"></i></span>
+            </div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.after18">После 18:00 (1 час)</span>
+              <span class="price-value">20,000 <i class="fas fa-coins"></i></span>
+            </div>
+            <div class="price-item">
+              <span class="price-label">Ночной (22:00-08:00)</span>
+              <span class="price-value">60,000 <i class="fas fa-coins"></i></span>
+            </div>
+          </div>
+
+          <div class="pricing-card vip">
+            <div class="zone-name">VIP <i class="fab fa-playstation"></i></div>
+            <div class="price-item">
+              <span class="price-label">До 18:00 (1 час)</span>
+              <span class="price-value">35,000 <i class="fas fa-coins"></i></span>
+            </div>
+            <div class="price-item">
+              <span class="price-label">После 18:00 (1 час)</span>
+              <span class="price-value">90,000 <i class="fas fa-coins"></i></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="promo-section">
+          <div class="bonus-badge">
+            <i class="fas fa-gift"></i> <span data-i18n="promo.badge">АКЦИИ И БОНУСЫ</span>
+          </div>
+          <h3><span data-i18n="promo.title">Специальные предложения</span></h3>
+          <p data-i18n="promo.desc">Зарегистрируйте аккаунт в клубе и получите мгновенную скидку 20% на услуги.</p>
+
+          <div class="promo-grid">
+            <div class="promo-item">
+              <h4><i class="fas fa-user-plus"></i> <span data-i18n="promo.item1.title">Скидка 20% за регистрацию</span>
+              </h4>
+              <p data-i18n="promo.item1.desc">Создайте аккаунт 606 Premium Game Zone — получите 20% скидку на услуги при
+                первом визите.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <div id="menu" class="tab-content" role="tabpanel" aria-labelledby="tab-menu" hidden>
+      <section>
+        <h2><i class="fas fa-utensils"></i> <span data-i18n="sections.menu.h2">Наше меню</span></h2>
+        <p data-i18n="menu.desc">Вкусные блюда и Мохито, чтобы подкрепиться во время игры</p>
+
+        <h3><i class="fas fa-glass-cheers"></i><span data-i18n="menu.mojito.h3">Мохито</span></h3>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="klubnicnyi-mohito-s-bol-sim-kolicestvom-kolotogo-l-da.webp"
+              alt="Клубничный мохито">
+            <h4><span data-i18n="menu.mojito.strawberry">Клубничный</span> <span class="menu-price">20,000</span></h4>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="tradicionnyi-mohito-so-l-dom-i-matoi-na-stole.webp"
+              alt="Классический напиток мохито">
+            <h4><span data-i18n="menu.mojito.classic">Классический</span> <span class="menu-price">20,000</span></h4>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="goluboi-kokteil-s-bol-sim-kolicestvom-kolotogo-l-da.webp"
+              alt="Океан — голубой мохито">
+            <h4><span data-i18n="menu.mojito.ocean">Океан</span> <span class="menu-price">20,000</span></h4>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="malina.webp" alt="Малиновый мохито">
+            <h4><span data-i18n="menu.mojito.raspberry">Малиновый</span> <span class="menu-price">20,000</span>
+            </h4>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="tarhun.webp" alt="Тархун — зелёный мохито">
+            <h4><span data-i18n="menu.mojito.tarragon">Тархун</span> <span class="menu-price">20,000</span>
+            </h4>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="grafin.webp" alt="Графин с напитком">
+            <h4><span data-i18n="menu.mojito.carafe">Графин (1L)</span> <span class="menu-price">50,000</span></h4>
+          </div>
+        </div>
+
+        <h3><i class="fas fa-hotdog"></i> <span data-i18n="menu.hotdogs.h3">Хот-доги</span></h3>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="https://source.unsplash.com/800x600/?hot-dog"
+              alt="Хот-дог классический">
+            <h4><span data-i18n="menu.hotdogs.two">Хот-дог (2 сосиски)</span> <span class="menu-price">20,000</span>
+            </h4>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="https://source.unsplash.com/800x600/?hotdog"
+              alt="Хот-дог с дополнительной сосиской">
+            <h4><span data-i18n="menu.hotdogs.three">Хот-дог (3 сосиски)</span> <span class="menu-price">25,000</span>
+            </h4>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="https://source.unsplash.com/800x600/?spicy,hot-dog"
+              alt="Хот-дог Турецкий">
+            <h4><span data-i18n="menu.hotdogs.turkish">Хот-дог Турецкий</span> <span class="menu-price">35,000</span>
+            </h4>
+          </div>
+        </div>
+
+        <h3><i class="fas fa-burger"></i> <span data-i18n="menu.burgers.h3">Чизбургеры</span></h3>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="cheese_burger_1.webp" alt="Чизбургер с одной котлетой">
+            <h4><span data-i18n="menu.burgers.one">Чизбургер (1 котлетка)</span> <span class="menu-price">35,000</span>
+            </h4>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="cheese_burger_2.webp" alt="Дабл чизбургер">
+            <h4><span data-i18n="menu.burgers.two">Чизбургер (2 котлетки)</span> <span class="menu-price">45,000</span>
+            </h4>
+          </div>
+        </div>
+        <h3><i class="fas fa-tea"></i> <span data-i18n="menu.tea.h3">Чай</span></h3>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" src="bardak_tea-2.webp" alt="Чай">
+            <h4><span data-i18n="menu.tea.cup">Чай (Бардак)</span> <span class="menu-price">10,000</span></h4>
+          </div>
+      </section>
+    </div>
+
+    <div id="gallery" class="tab-content" role="tabpanel" aria-labelledby="tab-gallery" hidden>
+      <section class="gallery-section">
+        <h2 class="gallery-title"><i class="fas fa-camera"></i> <span data-i18n="gallery.title">Галерея клуба</span>
+        </h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img loading="lazy" decoding="async" src="photo_1_2025-08-06_19-19-57.jpg" alt="SOG GAME CLUB"
+              class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-item-title">606 GAME CLUB</h3>
+              <p class="gallery-item-desc" data-i18n="gallery.item1.desc">Наш игровой клуб с современным дизайном и
+                лучшим оборудованием в городе</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img loading="lazy" decoding="async" src="photo_1_2025-08-06_19-18-37.jpg" alt="606 GAME CLUB"
+              class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-item-title">606 GAME CLUB</h3>
+              <p class="gallery-item-desc" data-i18n="gallery.item2.desc">Яркая неоновая вывеска, которую видно издалека
+              </p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img loading="lazy" decoding="async" src="admin-desk.jpg" alt="Административная стойка" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-item-title">RECEPTION</h3>
+              <p class="gallery-item-desc" data-i18n="gallery.item3.desc">Современная стойка администратора с подсветкой
+              </p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img loading="lazy" decoding="async" src="standart-zone.jpg" alt="Standart Zone" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-item-title">STANDART ZONE</h3>
+              <p class="gallery-item-desc" data-i18n="gallery.item4.desc">Комфортные места с мощными игровыми ПК</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img loading="lazy" decoding="async" src="vip-zone.jpg" alt="VIP Zone" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-item-title">VIP ZONE</h3>
+              <p class="gallery-item-desc" data-i18n="gallery.item5.desc">Премиум зона с PlayStation 5 и креслами
+                премиум-класса</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img loading="lazy" decoding="async" src="warzone.jpg" alt="Warzone" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-item-title">WARZONE</h3>
+              <p class="gallery-item-desc" data-i18n="gallery.item6.desc">Киберспортивная зона для турниров</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <div id="contacts" class="tab-content" role="tabpanel" aria-labelledby="tab-contacts" hidden>
+      <section>
+        <h2><i class="fas fa-map-marker-alt"></i> <span data-i18n="contacts.h2">Как нас найти</span></h2>
+
+        <div class="map-container">
+          <div class="map-lazy" id="map-lazy" role="button" aria-label="Загрузить карту Google" tabindex="0">
+            <span class="map-lazy-text" data-i18n="contacts.showMap">Показать карту</span>
+          </div>
+          <div class="map-overlay"></div>
+        </div>
+
+        <div class="contact-info">
+          <div class="working-hours">
+            <i class="fas fa-clock"></i> <span data-i18n="contacts.hours">Режим работы: 08:00 - 00:00 (без
+              выходных)</span>
+          </div>
+
+          <a href="tel:+998901234567" class="phone-link">
+            <i class="fas fa-phone-alt phone-icon"></i> +998 90 123 45 67
+          </a>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h4><i class="fas fa-map-pin"></i> <span data-i18n="contacts.address.title">Адрес</span></h4>
+              <p data-i18n="contacts.address.l1">обл. Хорезм, г. Ургенч</p>
+              <p data-i18n="contacts.address.l2">ул. Абулгази Бахадирхан</p>
+            </div>
+            <div class="contact-card">
+              <h4><i class="fas fa-info-circle"></i> <span data-i18n="contacts.socials.title">Соцсети</span></h4>
+              <div class="social-links">
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/606gameclub/" class="social-link"
+                  aria-label="Instagram 606 Game Zone"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+
+
+  <div class="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+
+  <footer>
+    <div class="footer-logo">606 PREMIUM GAME ZONE</div>
+    <p data-i18n="footer.desc">Лучший игровой клуб в Ургенче с VIP зонами и PlayStation 5</p>
+    <div class="social-links">
+      <a target="_blank" rel="noopener" href="https://www.instagram.com/606gameclub/" class="social-link"
+        aria-label="Instagram 606 Game Zone"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="copyright">© 2025 606 Premium Game Zone. <span data-i18n="footer.copyright">Все права защищены.</span>
+    </div>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.querySelector('.loader-wrapper').classList.add('hidden');
+        document.body.classList.remove('is-loading');
+      }, 800);
+    });
+
+    function createMatrixRain() {
+      const matrixContainer = document.getElementById('matrix-rain');
+      const chars = '606';
+      if (!matrixContainer) return;
+
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+      if (window.PERF_LITE) return;
+
+      const isChrome = /Chrome\//.test(navigator.userAgent) && !/Edg\//.test(navigator.userAgent);
+      const isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+
+      const base = isChrome ? 20 : 35;
+      const count = Math.max(12, Math.min(40, base + (isMobile ? -8 : 0)));
+
+      const frag = document.createDocumentFragment();
+      for (let i = 0; i < count; i++) {
+        const char = document.createElement('div');
+        char.className = 'matrix-char';
+        char.textContent = chars[Math.floor(Math.random() * chars.length)];
+        char.style.left = Math.random() * 100 + '%';
+        char.style.animationDelay = Math.random() * 8 + 's';
+        char.style.animationDuration = (Math.random() * 3 + 5) + 's';
+        frag.appendChild(char);
+      }
+      matrixContainer.appendChild(frag);
+    }
+
+
+    function openTab(tabName, triggerEl) {
+      const tabContents = document.getElementsByClassName('tab-content');
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove('active');
+        tabContents[i].setAttribute('hidden', '');
+      }
+
+      const tabButtons = document.getElementsByClassName('tab-btn');
+      for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove('active');
+        tabButtons[i].setAttribute('aria-selected', 'false');
+        tabButtons[i].setAttribute('tabindex', '-1');
+      }
+
+      const panel = document.getElementById(tabName);
+      panel.classList.add('active');
+      panel.removeAttribute('hidden');
+
+      if (triggerEl) {
+        triggerEl.classList.add('active');
+        triggerEl.setAttribute('aria-selected', 'true');
+        triggerEl.setAttribute('tabindex', '0');
+        triggerEl.focus({ preventScroll: true });
+      }
+
+      const newHash = `#${tabName}`;
+      if (history.replaceState) {
+        history.replaceState(null, '', newHash);
+      } else {
+        location.hash = newHash;
+      }
+    }
+
+
+
+
+
+    const PREFERS_REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const IS_MOBILE = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    let lastKnownScrollY = 0;
+    let ticking = false;
+    function handleScroll() {
+      lastKnownScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = lastKnownScrollY;
+          const backToTop = document.querySelector('.back-to-top');
+          const scrollBar = document.getElementById('scroll-progress');
+          if (y > 300) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+
+          const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const progress = docHeight > 0 ? (y / docHeight) * 100 : 0;
+          if (scrollBar) scrollBar.style.width = progress + '%';
+
+          if (!IS_MOBILE && !PREFERS_REDUCED && !window.PERF_LITE) {
+            document.body.style.backgroundPosition = `center ${y * 0.5}px`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: window.PERF_LITE ? 'auto' : 'smooth' });
+    }
+
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key >= '1' && e.key <= '4') {
+        const tabIndex = parseInt(e.key) - 1;
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        if (tabButtons[tabIndex]) {
+          tabButtons[tabIndex].click();
+        }
+      }
+
+
+      if (e.shiftKey && e.key === 'End') {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.PERF_LITE) createMatrixRain();
+
+
+      const hash = location.hash && location.hash.replace('#', '');
+      const validTabs = ['zones', 'menu', 'gallery', 'contacts'];
+      if (validTabs.includes(hash)) {
+        const btn = document.querySelector(`.tab-btn[aria-controls="${hash}"]`);
+        if (btn) btn.click();
+      }
+
+
+      const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
+      document.querySelector('[role="tablist"]').addEventListener('keydown', (e) => {
+        const currentIndex = tabButtons.findIndex(b => b.getAttribute('aria-selected') === 'true');
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          const dir = e.key === 'ArrowRight' ? 1 : -1;
+          let next = (currentIndex + dir + tabButtons.length) % tabButtons.length;
+          tabButtons[next].click();
+        }
+        if (e.key === 'Home') { e.preventDefault(); tabButtons[0].click(); }
+        if (e.key === 'End') { e.preventDefault(); tabButtons[tabButtons.length - 1].click(); }
+      });
+
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+      if (!prefersReduced && !window.PERF_LITE && document.getElementById('particles-js')) {
+        const isChrome = /Chrome\//.test(navigator.userAgent) && !/Edg\//.test(navigator.userAgent);
+        const particleCount = isMobile ? 35 : (isChrome ? 60 : 100);
+        particlesJS('particles-js', {
+          "particles": {
+            "number": {
+              "value": particleCount,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": { "value": ["#00F0FF", "#C724F1", "#FF2D75", "#FFEE00", "#39FF14"] },
+            "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 } },
+            "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+            "size": { "value": 4, "random": true, "anim": { "enable": true, "speed": 3, "size_min": 0.1, "sync": false } },
+            "line_linked": { "enable": !isMobile, "distance": 150, "color": "#00F0FF", "opacity": 0.3, "width": 1 },
+            "move": {
+              "enable": true,
+              "speed": isMobile ? 1.2 : 2,
+              "direction": "none",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": { "enable": true, "rotateX": 600, "rotateY": 1200 }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": { "enable": !isMobile, "mode": "grab" },
+              "onclick": { "enable": !isMobile, "mode": "push" },
+              "resize": true
+            },
+            "modes": {
+              "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+              "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+              "repulse": { "distance": 200, "duration": 0.4 },
+              "push": { "particles_nb": 2 },
+              "remove": { "particles_nb": 2 }
+            }
+          },
+          "retina_detect": true
+        });
+        document.addEventListener('visibilitychange', () => {
+          const p = window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS;
+          if (!p) return;
+          p.particles.move.enable = !document.hidden;
+          if (p.fn && p.fn.particlesRefresh) { p.fn.particlesRefresh(); }
+        });
+      }
+
+
+      if (!window.PERF_LITE) {
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in'); });
+        }, observerOptions);
+        document.querySelectorAll('.pricing-card, .menu-item, .promo-item, .contact-card, .gallery-item').forEach(el => {
+          el.classList.add('reveal');
+          observer.observe(el);
+        });
+        // Sections themselves
+        document.querySelectorAll('section').forEach(sec => { sec.classList.add('reveal'); observer.observe(sec); });
+      }
+
+      const buttons = document.querySelectorAll('.tab-btn, .phone-link');
+      buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+          button.style.filter = 'brightness(1.2)';
+        });
+
+        button.addEventListener('mouseleave', () => {
+          button.style.filter = 'brightness(1)';
+        });
+      });
+
+
+      const scrollBar = document.getElementById('scroll-progress');
+      if (scrollBar) {
+        scrollBar.style.width = '0%';
+      }
+
+      // Lazy load Google Map on user interaction
+      const mapLazyEl = document.getElementById('map-lazy');
+      const mapContainerEl = document.querySelector('.map-container');
+      let mapInjected = false;
+      function injectMap() {
+        if (mapInjected || !mapContainerEl) return;
+        mapInjected = true;
+        const iframe = document.createElement('iframe');
+        iframe.src = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d186.61456536647677!2d60.6441186!3d41.551212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfcf6832af55fb%3A0xb9ecbd8498b5a9df!2sShawarma%20and%20burger!5e0!3m2!1sru!2s!4v1754565201063!5m2!1sru!2s";
+        iframe.width = "100%";
+        iframe.height = "100%";
+        iframe.style.border = "0";
+        iframe.loading = "lazy";
+        iframe.title = "Карта расположения 606 Game Zone";
+        mapContainerEl.insertBefore(iframe, mapContainerEl.firstChild);
+        if (mapLazyEl) mapLazyEl.remove();
+      }
+      if (mapLazyEl) {
+        mapLazyEl.addEventListener('click', injectMap);
+        mapLazyEl.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); injectMap(); }
+        });
+      }
+
+
+      const GLITCH_IS_MOBILE = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+      let glitchTimer = null;
+      const glitchIntervalMs = GLITCH_IS_MOBILE ? 900 : 400;
+      function runGlitchTick() {
+        const glitchElements = document.querySelectorAll('.cyber-glitch');
+        glitchElements.forEach(element => {
+          const randomClip1 = `rect(${Math.random() * 100}px, 9999px, ${Math.random() * 100}px, 0)`;
+          const randomClip2 = `rect(${Math.random() * 100}px, 9999px, ${Math.random() * 100}px, 0)`;
+          element.style.setProperty('--glitch-clip-1', randomClip1);
+          element.style.setProperty('--glitch-clip-2', randomClip2);
+        });
+      }
+      function startGlitch() {
+        if (glitchTimer || document.hidden) return;
+        glitchTimer = setInterval(runGlitchTick, glitchIntervalMs);
+      }
+      function stopGlitch() {
+        if (glitchTimer) { clearInterval(glitchTimer); glitchTimer = null; }
+      }
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopGlitch(); else startGlitch();
+      });
+      if (!window.PERF_LITE) startGlitch();
+    });
+
+
+
+
+    function typeWriter(element, text, speed = 100) {
+      let i = 0;
+      element.innerHTML = '';
+
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+
+
+    window.addEventListener('load', () => {
+      if ((window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) || window.PERF_LITE) return;
+      setTimeout(() => {
+        const logo = document.querySelector('.logo');
+        if (!logo) return;
+        const originalText = logo.textContent;
+        typeWriter(logo, originalText, 150);
+      }, 2500);
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.PERF_LITE) return;
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, 100 * index);
+      });
+    });
+  </script>
+</body>
+
+</html>
