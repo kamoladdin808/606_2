@@ -1879,6 +1879,48 @@
       }
     }
 
+    /* Extra small screens (e.g. 320px) layout fixes */
+    @media (max-width: 360px) {
+      .lang-switch {
+        top: 8px;
+        right: 8px;
+        transform: scale(0.9);
+        gap: 6px;
+      }
+
+      .lang-btn {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+      }
+
+      .contact-info .phone-link.phone-accent {
+        font-size: 1rem;
+        padding: 0.6em 1.4em;
+        margin: 0.35rem 0;
+        width: 92%;
+        justify-content: center;
+      }
+
+      .contact-info .phone-icon {
+        font-size: 1.1em !important;
+      }
+
+      .back-to-top {
+        bottom: 14px;
+        right: 14px;
+      }
+
+      footer .footer-meta {
+        font-size: 0.85rem;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      footer .footer-meta .footer-sep {
+        display: none;
+      }
+    }
+
     @media (max-width: 480px) {
       .logo {
         font-size: 2rem;
@@ -2006,6 +2048,8 @@
         'loader.loading': 'Загрузка...',
         'footer.desc': 'Лучший игровой клуб в Ургенче с VIP зонами и PlayStation 5',
         'footer.copyright': 'Все права защищены.',
+        'footer.meta.rights': '© 2025 606 PREMIUM GAME ZONE. Все права защищены.',
+        'footer.meta.made': 'Сделано Камоладдином',
         'sections.menu.h2': 'Наше меню',
         'menu.desc': 'Вкусные блюда и Мохито, чтобы подкрепиться во время игры',
         'menu.mojito.h3': 'Мохито',
@@ -2026,9 +2070,9 @@
         'menu.burgers.two': 'Чизбургер (2 котлетки)',
         'menu.tea.h3': 'Чай',
         'menu.tea.cup': 'Чай (Бардак)',
-  'menu.tea.lemon': 'Лемон чай',
-  'menu.tea.milk': 'Чай с молоком',
-  'menu.tea.regular': 'Обычный чай',
+        'menu.tea.lemon': 'Лемон чай',
+        'menu.tea.milk': 'Чай с молоком',
+        'menu.tea.regular': 'Обычный чай',
         'menu.cofee.h3': 'Кофе',
         'menu.coffee.cup': 'Кофе',
         // gallery keys removed by user request
@@ -2067,6 +2111,8 @@
         'loader.loading': 'Yuklanmoqda...',
         'footer.desc': 'Urganchdagi eng yaxshi o‘yin klubi: VIP zonalar va PlayStation 5',
         'footer.copyright': 'Barcha huquqlar himoyalangan.',
+        'footer.meta.rights': '© 2025 606 PREMIUM GAME ZONE. Barcha huquqlar himoyalangan.',
+        'footer.meta.made': 'Kamoladdin tomonidan yaratilgan',
         'sections.menu.h2': 'Bizning menyu',
         'menu.desc': 'Mazali taomlar va Mohito — o‘yin paytida quvvat oling',
         'menu.mojito.h3': 'Mohito',
@@ -2087,9 +2133,9 @@
         'menu.burgers.two': 'Chizburger (2 kotletali)',
         'menu.tea.h3': 'Choy',
         'menu.tea.cup': 'Choy (Bardak)',
-  'menu.tea.lemon': 'Limonli choy',
-  'menu.tea.milk': 'Sutli choy',
-  'menu.tea.regular': 'Oddiy choy',
+        'menu.tea.lemon': 'Limonli choy',
+        'menu.tea.milk': 'Sutli choy',
+        'menu.tea.regular': 'Oddiy choy',
         'menu.cofee.h3': 'Qahva',
         'menu.coffee.cup': 'Qahva',
         'contacts.h2': 'Qanday topish mumkin',
@@ -2238,15 +2284,15 @@
           </div>
 
           <div class="pricing-card vip">
-              <div class="zone-name">VIP <i class="fab fa-playstation"></i></div>
-              <div class="price-item">
-                <span class="price-label" data-i18n="price.before18">До 18:00 (1 час)</span>
-                <span class="price-value">35.000<i class="fas fa-coins"></i></span>
-              </div>
-              <div class="price-item">
-                <span class="price-label" data-i18n="price.after18">После 18:00 (1 час)</span>
-                <span class="price-value">50.000<i class="fas fa-coins"></i></span>
-              </div>
+            <div class="zone-name">VIP <i class="fab fa-playstation"></i></div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.before18">До 18:00 (1 час)</span>
+              <span class="price-value">35.000<i class="fas fa-coins"></i></span>
+            </div>
+            <div class="price-item">
+              <span class="price-label" data-i18n="price.after18">После 18:00 (1 час)</span>
+              <span class="price-value">50.000<i class="fas fa-coins"></i></span>
+            </div>
           </div>
         </div>
       </section>
@@ -2325,25 +2371,26 @@
         <h3><i class="fas fa-hotdog"></i> <span data-i18n="menu.hotdogs.h3">Хот-доги</span></h3>
         <div class="menu-grid">
           <div class="menu-item">
-            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600" src="khot-dog.jpg" alt="Хот-дог классический">
+            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600" src="khot-dog.jpg"
+              alt="Хот-дог классический">
             <h4><span data-i18n="menu.hotdogs.mini">Хот-дог (мини булочка)</span> <span class="menu-price">15,000</span>
             </h4>
           </div>
           <div class="menu-item">
-            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600"
-              src="IMG_8871.JPG" alt="Хот-дог классический">
+            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600" src="IMG_8871.JPG"
+              alt="Хот-дог классический">
             <h4><span data-i18n="menu.hotdogs.two">Хот-дог (2 сосиски)</span> <span class="menu-price">20,000</span>
             </h4>
           </div>
           <div class="menu-item">
-            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600"
-              src="IMG_8870.JPG" alt="Хот-дог с дополнительной сосиской">
+            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600" src="IMG_8870.JPG"
+              alt="Хот-дог с дополнительной сосиской">
             <h4><span data-i18n="menu.hotdogs.three">Хот-дог (3 сосиски)</span> <span class="menu-price">25,000</span>
             </h4>
           </div>
           <div class="menu-item">
-            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600"
-              src="IMG_8865.JPG" alt="Хот-дог Турецкий">
+            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600" src="IMG_8865.JPG"
+              alt="Хот-дог Турецкий">
             <h4><span data-i18n="menu.hotdogs.turkish">Хот-дог Турецкий</span> <span class="menu-price">35,000</span>
             </h4>
           </div>
@@ -2371,14 +2418,16 @@
               alt="Чай">
             <h4><span data-i18n="menu.tea.cup">Чай (Бардак)</span> <span class="menu-price">15,000</span></h4>
           </div>
-           <div class="menu-item">
-             <img class="menu-img" loading="lazy" decoding="async" width="800" height="600" src="chay-s-limonom.jpg" alt="Лемон чай">
-             <h4><span data-i18n="menu.tea.lemon">Лемон чай</span> <span class="menu-price">15,000</span></h4>
-           </div>
-           <div class="menu-item">
-             <img class="menu-img" loading="lazy" decoding="async" width="800" height="600" src="milk_tea.jpg" alt="Чай с молоком">
-             <h4><span data-i18n="menu.tea.milk">Чай с молоком</span> <span class="menu-price">6,000</span></h4>
-           </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600" src="chay-s-limonom.jpg"
+              alt="Лемон чай">
+            <h4><span data-i18n="menu.tea.lemon">Лемон чай</span> <span class="menu-price">15,000</span></h4>
+          </div>
+          <div class="menu-item">
+            <img class="menu-img" loading="lazy" decoding="async" width="800" height="600" src="milk_tea.jpg"
+              alt="Чай с молоком">
+            <h4><span data-i18n="menu.tea.milk">Чай с молоком</span> <span class="menu-price">6,000</span></h4>
+          </div>
           <div class="menu-item">
             <img class="menu-img" loading="lazy" decoding="async" width="800" height="600"
               src="depositphotos_40984715-stock-photo-transparent-cup-of-green-tea.webp" alt="Обычный чай">
@@ -2410,10 +2459,12 @@
           </div>
 
           <div style="display:flex;flex-direction:column;align-items:center;margin-bottom:1.2em;">
-            <a href="tel:+998556041606" class="phone-link" style="background:linear-gradient(90deg,#C724F1 0%,#FF2D75 50%,#FFEE00 100%);color:#fff;font-family:'Orbitron',sans-serif;font-size:1.25rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.7em;padding:0.7em 2.2em;border-radius:48px;box-shadow:0 0 18px #C724F1AA;">
+            <a href="tel:+998556041606" class="phone-link"
+              style="background:linear-gradient(90deg,#C724F1 0%,#FF2D75 50%,#FFEE00 100%);color:#fff;font-family:'Orbitron',sans-serif;font-size:1.25rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.7em;padding:0.7em 2.2em;border-radius:48px;box-shadow:0 0 18px #C724F1AA;">
               <i class="fas fa-phone-alt phone-icon" style="font-size:1.3em;"></i>+998 55 604 16 06
             </a>
-            <a href="tel:+998336016006" class="phone-link" style="background:linear-gradient(90deg,#C724F1 0%,#FF2D75 50%,#FFEE00 100%);color:#fff;font-family:'Orbitron',sans-serif;font-size:1.25rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.7em;padding:0.7em 2.2em;border-radius:48px;box-shadow:0 0 18px #C724F1AA;">
+            <a href="tel:+998336016006" class="phone-link"
+              style="background:linear-gradient(90deg,#C724F1 0%,#FF2D75 50%,#FFEE00 100%);color:#fff;font-family:'Orbitron',sans-serif;font-size:1.25rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.7em;padding:0.7em 2.2em;border-radius:48px;box-shadow:0 0 18px #C724F1AA;">
               <i class="fas fa-phone-alt phone-icon" style="font-size:1.3em;"></i>+998 33 601 60 06
             </a>
           </div>
@@ -2453,10 +2504,22 @@
         aria-label="Instagram 606 Game Zone"><i class="fab fa-instagram"></i></a>
     </div>
     <div style="margin:1.2em 0 0.5em 0;">
-      <a href="tel:+998556041606" style="color:var(--cyber-yellow);text-decoration:none;font-weight:600;margin-right:1.5em;"><i class="fas fa-phone-alt"></i> +998 55 604 16 06</a>
-      <a href="tel:+998336016006" style="color:var(--cyber-yellow);text-decoration:none;font-weight:600;"><i class="fas fa-phone-alt"></i> +998 33 601 60 06</a>
+      <a href="tel:+998556041606"
+        style="color:var(--cyber-yellow);text-decoration:none;font-weight:600;margin-right:1.5em;"><i
+          class="fas fa-phone-alt"></i> +998 55 604 16 06</a>
+      <a href="tel:+998336016006" style="color:var(--cyber-yellow);text-decoration:none;font-weight:600;"><i
+          class="fas fa-phone-alt"></i> +998 33 601 60 06</a>
     </div>
-    <div class="copyright">© 2025 606 Premium Game Zone. <span data-i18n="footer.copyright">Все права защищены.</span>
+
+    <div class="footer-meta"
+      style="margin-top:10px;display:flex;align-items:center;justify-content:center;gap:16px;color:#cfcfcf;font-weight:600;">
+      <span data-i18n="footer.meta.rights">© 2025 606 PREMIUM GAME ZONE. Все права защищены.</span>
+      <span class="footer-sep" style="width:1px;height:1em;background:rgba(255,255,255,.35);"></span>
+      <a href="https://www.instagram.com/kokojambo_808/" target="_blank" rel="noopener"
+        style="color:#FFEE00;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+        <i class="fab fa-instagram"></i>
+        <span data-i18n="footer.meta.made">Сделано Камоладдином</span>
+      </a>
     </div>
   </footer>
 
